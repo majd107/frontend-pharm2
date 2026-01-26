@@ -1,0 +1,173 @@
+:root {
+    --mian-color: #045BE9;
+    --mian-color-alt: #3B67AE;
+    --translation: 0.3s;
+    --Padding-top: 100px;
+    --Padding-bottom: 100px;
+    --background-color: #ffffff;
+    --background-color-main: #F8F9FB;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    /* direction: rtl; */
+    background-color: var(--background-color-main);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+/* ------------------------------------------ */
+/* login */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 27%;
+}
+
+.login h1 {
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+
+.login .content {
+    width: 75%;
+}
+
+.login {
+    background-color: #3B67AE;
+    width: 45%;
+}
+
+.login .content .email,
+.login .content .password {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login .content .email input,
+.login .content .password input {
+    border: none;
+    background: none;
+    border-bottom: 2px solid black;
+    margin: 0 0 10px 0;
+    outline: none;
+
+}
+
+.login .content .email label,
+.login .content .password label {
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+
+::placeholder {
+    color: black;
+}
+
+.login .content form .btn_login button {
+    border: 2px solid var(--background-color);
+    outline: none;
+    width: 50%;
+    margin: 10px;
+    padding: 9px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: bolder;
+
+}
+
+.login .content form .btn_login {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.login .content form .btn_login button:hover {
+    background-color: #3B67AE;
+    transition: 3s;
+    border: 2px solid var(--background-color);
+}
+
+.login .icon {
+    position: absolute;
+}
+
+.login .icon i {
+    background-color: var(--mian-color-alt);
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    font-size: 3rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    left: 0.4rem;
+    top: -4.5rem;
+    margin: 10px;
+}
+
+.fa-user:before {
+    content: "\f007";
+    position: relative;
+    top: 27px;
+}
+
+.faceid {
+    border: none;
+    background-color: transparent;
+    /* position: relative;
+        left: 100px; */
+    cursor: pointer;
+}
+
+.full_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 570px) {
+    .login {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .login {
+        width: 70%;
+        position: absolute;
+        left: 55px;
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Details</title>
+
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/pharmacydetails.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/render.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Work+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,200&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../link/details.js" defer></script>
+    <script src="../link/logout.js" defer></script>
+                <script src="../link/link.js" defer></script>
+
+</head>
+
+<body>
+    <div class="all_part2">
+        <div class="side">
+            <div class="sidebar">
+                <div class="content">
+                    <div class="logo">
+                        <img src="../image/logo.jpg" alt="">
+                    </div>
+                    <h3>Your Pharmacies Community</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="icon-link">
+                                <i class="fa fa-home"></i>
+                                <span class="link-text">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pharmasest.html" class="icon-link">
+                                <i class="fa fa-plus-circle"></i>
+                                <span class="link-text">pharmasest</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="companies.html" class="icon-link">
+                                <i class="fa fa-institution"></i>
+                                <span class="link-text">companies</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="btn_logout" class="icon-link">
+                                <i class="fa fa-sign-out"></i>
+                                <span class="link-text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="rest_part">
+            <div class="top_side">
+                <div class="personal_info">
+                    <h2 class="title">Pharmacy's Information:</h2>
+                    <div class="details">
+                        <div class="name"><i class="fa fa-user-circle" style="margin: 10px;"></i>
+                            <h3>Name: <span id="pharm-name"></span></h3>
+                        </div>
+                        <div class="place"><i class="fa fa-map-marker" style="margin: 10px;"></i>
+                            <h3>Place: <span id="pharm-location"></span></h3>
+                        </div>
+                        <div class="profit"><i class="fa fa-dollar" style="margin: 10px;"></i>
+                            <h3>Profit: <span id="pharm-profit"></span></h3>
+                        </div>
+                        <div class="sals"><i class="fa fa-line-chart" style="margin: 10px;"></i>
+                            <h3>Sales: <span id="pharm-sales"></span></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line_chart">
+                    <h2 class="title">Profits:</h2>
+                    <canvas id="profitChart" width="1000" height="400"></canvas>
+                </div>
+            </div>
+
+            <div class="stock">
+                <h2 class="title" style="padding: 20px 0;">The Stock:</h2>
+                <div class="content_stock">
+                    <div class="number_of_med">
+                        <h2>Number of Medicines</h2><span id="pharm-number"></span>
+                    </div>
+                    <div class="Capital">
+                        <h2>Capital</h2><span id="pharm-capital"></span>
+                    </div>
+                    <div class="sals">
+                        <h2>Sales</h2><span id="pharm-sales-stock"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bills">
+                <div class="top_part">
+                    <h2 class="title" style="padding: 20px 0;">The Bills:</h2>
+                    <button id="downloadAllBtn">Download Selected</button>
+                </div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Code's Bill</th>
+                        <th>Count of Medicines</th>
+                        <th>Total Price</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

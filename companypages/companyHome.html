@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamplate three</title>
+    <!--Main tamplate css file  -->
+    <link rel="stylesheet" href="../Css/master.css">
+    <link rel="stylesheet" href="../Css/comp_profile.css">
+    <link rel="stylesheet" href="../Css/render.css">
+    <!--Render all elements normally-->
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <!--Font awsome library-->
+    <link rel="stylesheet" href="../Css/all.min.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Work+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,200&display=swap"
+        rel="stylesheet">
+    <script src="../link/getinfocompany.js" defer></script>
+    <script src="../link/editeinfocomp.js" defer></script>
+    <script src="../link/password.js" defer></script>
+    <script src="../link/logout.js" defer></script>
+                <script src="../link/link.js" defer></script>
+
+
+</head>
+
+<body>
+    <div class="all_part2">
+        <div class="sidebar">
+            <div class="content">
+                <div class="logo">
+                    <img src="../image/logo.jpg" alt="">
+                </div>
+                <h3>your company site >></h3>
+                <ul>
+                    <li>
+                        <a href="companyHome.html" class="icon-link">
+                            <i class="fa fa-user"></i>
+                            <span class="link-text">profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="medicines.html" class="icon-link">
+                            <i class="fa fa-box"></i>
+                            <span class="link-text">medicines</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="btn_logout" class="icon-link">
+                            <i class="fa fa-sign-out"></i>
+                            <span class="link-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="form_edite_pharm_home">
+            <div class="edite_info">
+                <h2 class="title">company's information:</h2>
+                <div class="name2">
+                    <label for="name">name:</label>
+                    <input type="text" id="company_name">
+                </div>
+                <div class="email2">
+                    <label for="email">email:</label>
+                    <input type="email" id="company_email">
+                </div>
+                <div class="location">
+                    <label for="location">location:</label>
+                    <input type="text" id="location">
+                </div>
+                <div class="password2">
+                    <label>Current password:</label>
+                    <input type="password" id="company_current_password">
+                </div>
+
+                <div class="password2">
+                    <label>New password:</label>
+                    <input type="password" id="company_password">
+                </div>
+
+                <div class="password2">
+                    <label>Confirm password:</label>
+                    <input type="password" id="company_confirm_password">
+                </div>
+
+
+                <div class="btn_edit">
+                    <button type="button" id="btn_change_password" style="width: 20%;">change password</button>
+
+                    <button id="btn_edit_company">Edite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

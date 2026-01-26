@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamplate three</title>
+    <!--Main tamplate css file  -->
+    <link rel="stylesheet" href="../Css/master.css">
+    <link rel="stylesheet" href="../Css/comp_profile.css">
+    <!--Render all elements normally-->
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <!--Font awsome library-->
+    <link rel="stylesheet" href="../Css/all.min.css">
+        <link rel="stylesheet" href="../css/render.css">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Work+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,200&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js/dist/face-api.min.js"></script>
+    <script src="./js/faceid.js" defer></script>
+    <script src="../js/stock.js" defer></script>
+    <script src="../link/count_not.js" defer></script>
+    <script src="../link/logout.js" defer></script>
+    <script src="../link/link.js" defer></script>
+
+</head>
+
+<body>
+    <div class="all_part2">
+        <div class="sidebar">
+            <div class="content">
+                <div class="logo">
+                    <img src="../image/logo.jpg" alt="">
+                </div>
+                <h3>your pharmcy site >></h3>
+                <ul>
+                    <li>
+                        <a href="pharmciestHome.html" class="icon-link">
+                            <i class="fa fa-user"></i>
+                            <span class="link-text">profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="stock.html" class="icon-link">
+                            <i class="fa fa-box"></i>
+                            <span class="link-text">stock</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="comapnyandorders.html" class="icon-link">
+                            <i class="fa fa-building"></i>
+                            <span class="link-text">order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bills.html" class="icon-link">
+                            <i class="fa fa-file"></i>
+                            <span class="link-text">Bills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html" class="icon-link">
+                            <i class="fa fa-bell"></i>
+                            <span class="link-text">notifications</span>
+                            <span value="0" class="not"></span>
+                        </a>
+                    </li>
+                    <li id="addFaceBtn">
+                        <a href="#" id="faceBtn" class="icon-link">
+                            <i class="fa fa-face-dizzy"></i>
+                            <span class="link-text">Add FaceID</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="btn_logout" class="icon-link">
+                            <i class="fa fa-sign-out"></i>
+                            <span class="link-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="form_edite_pharm_home">
+
+            <div class="med">
+                <h2 class="title">your Medicines:</h2>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i>
+            </div>
+
+            <div class="cards2">
+
+            </div>
+        </div>
+    </div>
+    <div id="faceModal" style="display:none; position:fixed; top:0; left:0; 
+background:#000a; width:100%; height:100%; justify-content:center; align-items:center;">
+
+        <div style="background:white; padding:20px; border-radius:15px; text-align:center;">
+            <h3>Scan your face</h3>
+            <video id="video" width="320" height="240" autoplay></video><br>
+            <button id="cancel" style="
+                            border: 1px solid var(--background-color-main);
+                            outline: 1px solid var(--mian-color-alt);
+                            padding: 5px;
+                            border-radius: 20px;
+                            background-color: var(--mian-color-alt);
+                        ">cancel</button>
+
+            <button id="captureFace" style=" border: 1px solid var(--background-color-main);
+                            outline: 1px solid var(--mian-color-alt);
+                            padding: 5px;
+                            border-radius: 20px;
+                            background-color: var(--mian-color-alt)">Capture</button>
+        </div>
+
+    </div>
+    <script>
+
+        document.getElementById("cancel").addEventListener("click", () => {
+
+            const video = document.getElementById("video");
+            const stream = video.srcObject;
+
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                video.srcObject = null;
+            }
+
+            const faceModal = document.getElementById("faceModal");
+            faceModal.style.display = "none";
+
+            window.location.href = "../pharmceistspages/stock.html";
+        });
+
+    </script>
+</body>
+
+</html>

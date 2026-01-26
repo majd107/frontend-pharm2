@@ -1,0 +1,192 @@
+:root {
+    --mian-color: #045BE9;
+    --mian-color-alt: #3B67AE;
+    --translation: 0.3s;
+    --Padding-top: 100px;
+    --Padding-bottom: 100px;
+    --background-color: #ffffff;
+    --background-color-main: #F8F9FB;
+}
+
+.all_part2 {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    /* justify-content: space-between; */
+}
+
+.other_parts {
+    display: flex;
+    gap: 10px;
+    width: 76%;
+    flex-direction: row;
+}
+
+.edite_info {
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 20px;
+    height: 630px;
+        border-radius: 20px;
+    margin: 10px 0;
+}
+
+.title {
+    margin: 10px 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: var(--mian-color-alt);
+}
+
+.name2,
+.email2,
+.password2,
+.location {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.name2 label,
+.email2 label,
+.password2 label,
+.location label {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.name2 input,
+.email2 input,
+.password2 input,
+.location input {
+    border: none;
+    background-color: #ecebed;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.number_of_users {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    width: 48%;
+    /* padding: 20px; */
+    /* gap: 20px; */
+    align-items: center;
+    /* text-align: center; */
+}
+
+.counter_user {
+    margin: 10px 0;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 20px;
+}
+
+.comp,
+.pharm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px 0;
+    background-color: var(--background-color);
+    width: 100%;
+    border: 2px solid var(--mian-color-alt);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 4px black;
+}
+
+.comp span,
+.pharm span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--mian-color);
+}
+
+.comp h3,
+.pharm h3 {
+    font-size: 1.7em;
+}
+
+.btn_edit,
+.btn_pharm_form,
+.btn_comp_form {
+    display: flex;
+    justify-content: end;
+}
+
+.btn_edit button,
+.btn_comp_form button,
+.btn_pharm_form button {
+    margin: 10px;
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    background-color: var(--mian-color-alt);
+    border: 1px solid var(--background-color-main);
+    outline: 2px solid var(--mian-color-alt);
+}
+
+.btn_edit button:hover {
+    cursor: pointer;
+}
+
+.edit_part {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add_form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    gap: 10px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px 15px 0 15px;
+}
+
+.header {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+.form_comp,
+.form_pharm {
+    margin: 20px 0;
+}
+
+.switch:hover {
+    cursor: pointer;
+}
+
+.title_profit {
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--mian-color-alt);
+    margin: 20px;
+    /* background-color: var(--background-color); */
+}
+
+.title_profit::before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--mian-color-alt);
+    top: 50px;
+}

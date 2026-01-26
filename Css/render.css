@@ -1,0 +1,90 @@
+@media screen and (max-width: 790px) {
+    .sidebar {
+        max-width: 10%;
+        min-width: 10%;
+    }
+
+    .sidebar .content ul li a .link-text,
+    .sidebar h3,
+    .sidebar img {
+        display: none;
+    }
+
+    .form_edite_pharm_home {
+        width: 120%;
+    }
+
+
+}
+
+@media screen and (min-width: 465px) {
+    .sidebar {
+        /* max-width: 7%; */
+        min-width: 10%;
+    }
+
+    .form_edite_pharm_home {
+        width: 130%;
+    }
+
+}
+
+@media screen and (max-width: 340px) {
+    .sidebar {
+        min-width: 10%;
+    }
+
+    table {
+        overflow-x: auto;
+    }
+
+    .form_edite_pharm_home {
+        width: 100%;
+    }
+
+    .all_part2 {
+        width: 200%;
+    }
+
+
+}
+
+@media screen and (min-width: 400px) {
+    .btn_edit .change {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 250px) {
+    .btn_edit .addorder {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .btn_edit button {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .other_parts {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .number_of_users {
+        width: 140%;
+    }
+    .top_side{
+            height: 500px;
+                flex-wrap: wrap;
+    }
+    .top_side .personal_info,
+    .top_side .line_chart{
+        width: 140%;
+    }
+    .bills{
+        width: 140%;
+    }
+}
