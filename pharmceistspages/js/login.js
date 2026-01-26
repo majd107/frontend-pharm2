@@ -28,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         localStorage.setItem("role_id", data.user.role_id);
 
         if (data.user.role_id == 1) {
-            window.location.href = "../Admin/index.html";
+            window.location.href = "../admin/index.html";
         }
         else if (data.user.role_id == 2) {
             window.location.href = "../pharmceistspages/pharmciestHome.html";
