@@ -18,7 +18,7 @@ document.getElementById("btn_change_password")
             return;
         }
 
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/admin/changepassword", {
+        const res = await fetch("http://majd.shooubadvance.com/api/admin/changepassword", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + window.token,

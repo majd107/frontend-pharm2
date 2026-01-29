@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("https://backendpharm-production.up.railway.app/api/login", {
+        const response = await fetch("http://majd.shooubadvance.com/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -28,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         localStorage.setItem("role_id", data.user.role_id);
 
         if (data.user.role_id == 1) {
-            window.location.href = "../admin/index.html";
+            window.location.href = "../admin/home.html";
         }
         else if (data.user.role_id == 2) {
             window.location.href = "../pharmceistspages/pharmciestHome.html";

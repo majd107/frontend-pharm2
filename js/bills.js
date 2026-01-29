@@ -1,7 +1,7 @@
 const token = localStorage.getItem("token");
 
 function loadBills() {
-    fetch("https://backendpharm-production.up.railway.app/api/pharmacy/getinfo", {
+    fetch("http://majd.shooubadvance.com/api/pharmacy/getinfo", {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token,
@@ -50,7 +50,7 @@ function bindPrintButtons() {
 }
 
 function fetchBillDetailsAndPrint(billId) {
-    fetch("https://backendpharm-production.up.railway.app/api/pharmacy/getinfobill", {
+    fetch("http://majd.shooubadvance.com/api/pharmacy/getinfobill", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + token,
@@ -82,7 +82,7 @@ function printSelectedBills() {
     console.log("Bills IDs to fetch:", bills_id);
     alert(`Selected IDs: ${bills_id.join(", ")}`); 
 
-    fetch("https://backendpharm-production.up.railway.app/api/admin/getinfobill", {
+    fetch("http://majd.shooubadvance.com/api/admin/getinfobill", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + token,

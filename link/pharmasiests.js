@@ -1,5 +1,5 @@
 const token = localStorage.getItem("token");
-const API_URL = "https://backendpharm-production.up.railway.app/api/admin/allpharmacy";
+const API_URL = "http://majd.shooubadvance.com/api/admin/allpharmacy";
 
 async function loadPharmacies() {
     try {
@@ -69,7 +69,7 @@ async function loadPharmacies() {
 }
 
 // delete pharm
-const API_URL2 = "https://backendpharm-production.up.railway.app/api/admin/deletepharmacy";
+const API_URL2 = "http://majd.shooubadvance.com/api/admin/deletepharmacy";
 
 async function deletePharmacy(id) {
     try {

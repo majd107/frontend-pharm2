@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!counterSpan) return;
 
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/count_notification", {
+        const res = await fetch("http://majd.shooubadvance.com/api/pharmacy/count_notification", {
             headers: {
                 "Authorization": "Bearer " + token,
                 "Accept": "application/json"

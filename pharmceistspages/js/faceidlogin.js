@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const descriptor = Array.from(detection.descriptor);
 
-        const res = await fetch("https://backendpharm-production.up.railway.app//api/loginFace2", {
+        const res = await fetch("http://majd.shooubadvance.com/api/loginFace2", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

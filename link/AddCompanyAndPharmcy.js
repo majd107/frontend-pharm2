@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const API_URL = "https://backendpharm-production.up.railway.app/api/admin";
+    const API_URL = "http://majd.shooubadvance.com/api/admin";
     const token = localStorage.getItem("token");
 
     if (!token) {
@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // ---------------------------------------
-    // دالة تحميل بيانات الأدمن وعدد الشركات والصيدليات
-    // ---------------------------------------
+
     async function loadAdminInfo() {
         try {
             const response = await fetch(`${API_URL}/getinfo`, {
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // تحديث عناصر DOM
             const adminName = document.getElementById("admin_name");
             const adminEmail = document.getElementById("admin_email");
             const numComp = document.getElementById("number_of_comp");
@@ -43,12 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // تحميل البيانات عند بدء الصفحة
     loadAdminInfo();
 
-    // ---------------------------------------
-    // إضافة شركة
-    // ---------------------------------------
     const btnAddComp = document.getElementById("btn_add_comp");
     if (btnAddComp) {
         btnAddComp.addEventListener("click", async function (e) {
@@ -87,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("comp_email").value = "";
                 document.getElementById("comp_password").value = "";
 
-                loadAdminInfo(); // تحديث العدد
+                loadAdminInfo(); 
 
             } catch (err) {
                 alert("Error connecting to server");
@@ -96,9 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ---------------------------------------
-    // إضافة صيدلية
-    // ---------------------------------------
+   
     const btnAddPharm = document.getElementById("btn_add_pharm");
     if (btnAddPharm) {
         btnAddPharm.addEventListener("click", async function (e) {
@@ -140,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("pharm_password").value = "";
                 document.getElementById("pharm_location").value = "";
 
-                loadAdminInfo(); // تحديث العدد
+                loadAdminInfo(); 
 
             } catch (err) {
                 alert("Error connecting to server");

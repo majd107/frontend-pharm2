@@ -2,12 +2,12 @@ document.getElementById("btn_logout").addEventListener("click", async function (
     const token = localStorage.getItem("token");
     if (!token) {
         alert("No token found, please login");
-        window.location.href = "../pharmceistspages/login.html";
+        window.location.href = "../pharmceistspages/index.html";
 
     }
 
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/admin/logout", {
+        const res = await fetch("http://majd.shooubadvance.com/api/admin/logout", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -25,7 +25,7 @@ document.getElementById("btn_logout").addEventListener("click", async function (
 
         localStorage.removeItem("token");
 
-        window.location.href = "../pharmceistspages/login.html";
+        window.location.href = "../pharmceistspages/index.html";
 
     } catch (err) {
         console.error(err);

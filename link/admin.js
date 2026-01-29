@@ -16,7 +16,7 @@ document.getElementById("btn_edit_admin").addEventListener("click", async functi
     if (email !== "") bodyData.email = email;
 
     try {
-        const response = await fetch("https://backendpharm-production.up.railway.app/api/admin/updateAdmin", {
+        const response = await fetch("http://majd.shooubadvance.com/api/admin/updateAdmin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -44,7 +44,7 @@ document.getElementById("btn_edit_admin").addEventListener("click", async functi
 document.addEventListener("DOMContentLoaded", async function () {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("https://backendpharm-production.up.railway.app/api/admin/allPharmaciesProfit", {
+    const res = await fetch("http://majd.shooubadvance.com/api/admin/allPharmaciesProfit", {
         headers: {
             "Authorization": "Bearer " + token,
             "Accept": "application/json"

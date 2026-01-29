@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const pharmacyId = queryParams.get("id");
 
     try {
-        const response = await fetch(`https://backendpharm-production.up.railway.app/api/admin/details_pharmacy/${pharmacyId}`, {
+        const response = await fetch(`http://majd.shooubadvance.com/api/admin/details_pharmacy/${pharmacyId}`, {
             headers: {
                 "Authorization": "Bearer " + token,
                 "Accept": "application/json"
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     try {
-        const res = await fetch(`https://backendpharm-production.up.railway.app/api/admin/pharmacyProfit/${pharmacyId}`, {
+        const res = await fetch(`http://majd.shooubadvance.com/api/admin/pharmacyProfit/${pharmacyId}`, {
             headers: {
                 "Authorization": "Bearer " + token,
                 "Accept": "application/json"
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 const token = localStorage.getItem("token");
 
 function fetchBillDetailsAndPrint(billId) {
-    fetch("https://backendpharm-production.up.railway.app/api/admin/getinfobill", {
+    fetch("http://majd.shooubadvance.com/api/admin/getinfobill", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + token,
@@ -132,7 +132,7 @@ function printSelectedBills() {
 
     const bills_id = Array.from(selectedCheckboxes).map(cb => cb.dataset.id);
 
-    fetch("https://backendpharm-production.up.railway.app/api/admin/getinfobill", {
+    fetch("http://majd.shooubadvance.com/api/admin/getinfobill", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + token,

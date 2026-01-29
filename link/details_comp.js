@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    const res = await fetch(`https://backendpharm-production.up.railway.app/api/admin/details_company/${id}`, {
+    const res = await fetch(`http://majd.shooubadvance.com/api/admin/details_company/${id}`, {
         headers: {
             "Authorization": "Bearer " + token,
             "Accept": "application/json"

@@ -7,7 +7,7 @@ async function fetchDrugs() {
     const token = localStorage.getItem("token");
 
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/getdrugs", {
+        const res = await fetch("http://majd.shooubadvance.com/api/pharmacy/getdrugs", {
             headers: {
                 "Authorization": "Bearer " + token,
                 "Accept": "application/json"
@@ -28,7 +28,7 @@ searchButton.addEventListener("click", async () => {
     const token = localStorage.getItem("token");
 
     try {
-        const res = await fetch(`https://backendpharm-production.up.railway.app/api/pharmacy/search_drug?query=${query}`, {
+        const res = await fetch(`http://majd.shooubadvance.com/api/pharmacy/search_drug?query=${query}`, {
             headers: { "Authorization": "Bearer " + token }
         });
         const data = await res.json();
@@ -60,7 +60,7 @@ function displayDrugs(drugs) {
             <div class="content">
                 <div class="details">
                     <div class="image" style="width: 50%; margin: auto;">
-                        <img src="https://backendpharm-production.up.railway.app/storage/${drug.image}" width="100%">
+                        <img src="http://majd.shooubadvance.com/storage/${drug.image}" width="100%">
                     </div>
 
                     <div class="name">
@@ -120,7 +120,7 @@ async function fetchDrugs() {
     const token = localStorage.getItem("token");
 
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/getdrugs", {
+        const res = await fetch("http://majd.shooubadvance.com/api/pharmacy/getdrugs", {
             headers: {
                 "Authorization": "Bearer " + token,
                 "Accept": "application/json"
@@ -157,7 +157,7 @@ async function sendOrder(drugId, quantity) {
     const token = localStorage.getItem("token");
 
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/order_drug", {
+        const res = await fetch("http://majd.shooubadvance.com/api/pharmacy/order_drug", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

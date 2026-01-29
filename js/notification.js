@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const token = localStorage.getItem("token");
 
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/notification", {
+        const res = await fetch("http://majd.shooubadvance.com/api/pharmacy/notification", {
             headers: {
                 "Authorization": "Bearer " + token,
                 "Accept": "application/json"
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const div = document.createElement("div");
                 div.classList.add("message");
 
-                // إذا الإشعار غير مقروء → ضيف كلاس unread
                 if (!notification.is_read) {
                     div.classList.add("unread");
                 }
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (readAllBtn) {
         readAllBtn.addEventListener("click", async () => {
             try {
-                await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/notification_read", {
+                await fetch("http://majd.shooubadvance.com/api/pharmacy/notification_read", {
                     method: "GET",
                     headers: {
                         "Authorization": "Bearer " + token,

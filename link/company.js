@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const token = localStorage.getItem("token");
 
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/admin/allcompany", {
+        const res = await fetch("http://majd.shooubadvance.com/api/admin/allcompany", {
             headers: {
                 "Authorization": "Bearer " + token,
                 "Accept": "application/json"

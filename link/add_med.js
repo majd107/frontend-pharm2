@@ -12,7 +12,7 @@ document.getElementById('addDrugBtn').addEventListener('click', async function (
     let token = localStorage.getItem("token"); 
 
     try {
-        let res = await fetch("https://backendpharm-production.up.railway.app/api/company/add_drugs", {
+        let res = await fetch("http://majd.shooubadvance.com/api/company/add_drugs", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + token
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadCompanyInfo() {
     const token = localStorage.getItem("token");
 
-    let response = await fetch("https://backendpharm-production.up.railway.app/api/company/getinfo", {
+    let response = await fetch("http://majd.shooubadvance.com/api/company/getinfo", {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token
@@ -68,7 +68,7 @@ function showDrugs(drugs) {
                     <div class="details">
 
                         <div class="image" style="width: 50%; margin: auto;">
-                            <img src="https://backendpharm-production.up.railway.app/storage/${drug.image}" width="100%">
+                            <img src="http://majd.shooubadvance.com/storage/${drug.image}" width="100%">
                         </div>
 
                         <div class="name">
@@ -105,7 +105,7 @@ async function searchDrug() {
         return;
     }
 
-    let response = await fetch(`https://backendpharm-production.up.railway.app/api/company/search_drug?query=${query}`, {
+    let response = await fetch(`http://majd.shooubadvance.com/api/company/search_drug?query=${query}`, {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token
@@ -125,7 +125,7 @@ function deleteDrug(id) {
         return;
     }
 
-    fetch(`https://backendpharm-production.up.railway.app/api/company/del_drug/${id}`, {
+    fetch(`http://majd.shooubadvance.com/api/company/del_drug/${id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",

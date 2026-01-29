@@ -16,7 +16,7 @@ document.getElementById("btn_edit_company").addEventListener("click", async func
     if (location !== "") bodyData.location = location;
 
     try {
-        const response = await fetch("https://backendpharm-production.up.railway.app/api/company/updatecompany", {
+        const response = await fetch("http://majd.shooubadvance.com/api/company/updatecompany", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

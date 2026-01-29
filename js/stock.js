@@ -15,7 +15,7 @@ async function searchDrug() {
     }
 
     try {
-        const response = await fetch(`https://backendpharm-production.up.railway.app/api/pharmacy/search_drug?query=${query}`, {
+        const response = await fetch(`http://majd.shooubadvance.com/api/pharmacy/search_drug?query=${query}`, {
             method: "GET",
             headers: { "Authorization": "Bearer " + token }
         });
@@ -32,7 +32,7 @@ async function searchDrug() {
 async function fetchDrugs() {
     const token = localStorage.getItem("token");
     try {
-        const res = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/getinfo", {
+        const res = await fetch("http://majd.shooubadvance.com/api/pharmacy/getinfo", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -58,7 +58,7 @@ function displayDrugs(drugs) {
             <div class="content">
                 <div class="details">
                     <div class="image" style="width: 50%; margin: auto;">
-                        <img src="https://backendpharm-production.up.railway.app/storage/${drug.image}" width="100%">
+                        <img src="http://majd.shooubadvance.com/storage/${drug.image}" width="100%">
                     </div>
 
                     <div class="name">
@@ -117,7 +117,7 @@ async function makeSale(salesArray) {
     const token = localStorage.getItem("token");
 
     try {
-        const response = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/sale_drug_array", {
+        const response = await fetch("http://majd.shooubadvance.com/api/pharmacy/sale_drug_array", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + token,

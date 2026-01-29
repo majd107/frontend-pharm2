@@ -1,7 +1,7 @@
 async function loadAdminInfo() {
     const token = localStorage.getItem("token");
 
-    const response = await fetch("https://backendpharm-production.up.railway.app/api/pharmacy/getinfo", {
+    const response = await fetch("http://majd.shooubadvance.com/api/pharmacy/getinfo", {
         headers: {
             "Authorization": "Bearer " + token,
             "Accept": "application/json"
